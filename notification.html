@@ -11,6 +11,9 @@
     <header>
         <nav class="navbar">
             <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpeg" alt="Deccan Multi State Housing Cooperative Society Ltd. Logo">
+                </a>
                 <h1>Deccan Monogram</h1>
             </div>
             <ul class="nav-links">
@@ -159,19 +162,21 @@
             const adminPanel = document.getElementById('adminPanel');
             const adminLogin = document.getElementById('adminLogin');
 
-            loginForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
+            if (loginForm) {
+                loginForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
 
-                // Simple authentication (replace with proper backend authentication)
-                if (username === 'admin' && password === 'password') {
-                    adminLogin.style.display = 'none';
-                    adminPanel.style.display = 'block';
-                } else {
-                    alert('Invalid credentials');
-                }
-            });
+                    // Simple authentication (replace with proper backend authentication)
+                    if (username === 'admin' && password === 'password') {
+                        adminLogin.style.display = 'none';
+                        adminPanel.style.display = 'block';
+                    } else {
+                        alert('Invalid credentials');
+                    }
+                });
+            }
 
             // Notice Filtering
             const filterButtons = document.querySelectorAll('.filter-btn');
@@ -196,12 +201,14 @@
 
             // Notice Form Handling
             const noticeForm = document.getElementById('noticeForm');
-            noticeForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                // Handle notice submission (implement backend integration)
-                alert('Notice posted successfully!');
-                noticeForm.reset();
-            });
+            if (noticeForm) {
+                noticeForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Handle notice submission (implement backend integration)
+                    alert('Notice posted successfully!');
+                    noticeForm.reset();
+                });
+            }
         });
     </script>
 </body>
