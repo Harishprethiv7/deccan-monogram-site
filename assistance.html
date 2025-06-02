@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistance - Deccan Monogram</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Deccan Monogram</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="channel-partner.html">Channel Partner</a></li>
+                <li><a href="assistance.html" class="active">Assistance</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="notification.html">Notification</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Assistance</h1>
+            </div>
+        </section>
+
+        <section class="assistance-info">
+            <div class="container">
+                <h2>How Can We Help You?</h2>
+                <div class="assistance-grid">
+                    <div class="assistance-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Housing Queries</h3>
+                        <p>Get assistance with property selection, documentation, and registration process.</p>
+                    </div>
+                    <div class="assistance-card">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Documentation</h3>
+                        <p>Support with legal documentation and paperwork requirements.</p>
+                    </div>
+                    <div class="assistance-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Financial Guidance</h3>
+                        <p>Information about payment plans, loans, and financial procedures.</p>
+                    </div>
+                    <div class="assistance-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Technical Support</h3>
+                        <p>Technical assistance and property-related queries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form id="assistanceForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="housing">Housing Query</option>
+                                    <option value="documentation">Documentation</option>
+                                    <option value="financial">Financial Query</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-details">
+                        <h2>Contact Information</h2>
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Address</h3>
+                                    <p>[Your Society Address]</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Phone</h3>
+                                    <p>+91 XXXXXXXXXX</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>info@deccanmonogram.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Working Hours</h3>
+                                    <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                                    <p>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Our Location</h2>
+                <div id="map" class="google-map"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> Phone: +91 XXXXXXXXXX</p>
+                <p><i class="fas fa-envelope"></i> Email: info@deccanmonogram.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: [Your Society Address]</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="channel-partner.html">Channel Partner</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Maps JavaScript -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script>
+        function initMap() {
+            // Replace with your society's coordinates
+            const societyLocation = { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: societyLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: societyLocation,
+                map: map,
+                title: "Deccan Monogram"
+            });
+        }
+        window.onload = initMap;
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Deccan Monogram</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Deccan Monogram</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="channel-partner.html">Channel Partner</a></li>
+                <li><a href="assistance.html">Assistance</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="notification.html" class="active">Notification</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Notifications</h1>
+            </div>
+        </section>
+
+        <!-- Admin Login Section (Initially Hidden) -->
+        <section id="adminLogin" class="admin-login">
+            <div class="container">
+                <h2>Admin Login</h2>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Admin Panel (Initially Hidden) -->
+        <section id="adminPanel" class="admin-panel" style="display: none;">
+            <div class="container">
+                <h2>Admin Panel</h2>
+                <form id="noticeForm" class="notice-form">
+                    <div class="form-group">
+                        <label for="noticeTitle">Notice Title</label>
+                        <input type="text" id="noticeTitle" name="noticeTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="noticeContent">Notice Content</label>
+                        <textarea id="noticeContent" name="noticeContent" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="noticeFile">Attachment (if any)</label>
+                        <input type="file" id="noticeFile" name="noticeFile">
+                    </div>
+                    <button type="submit" class="submit-btn">Post Notice</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Notice Board Section -->
+        <section class="notice-board">
+            <div class="container">
+                <div class="notice-filters">
+                    <button class="filter-btn active" data-filter="all">All Notices</button>
+                    <button class="filter-btn" data-filter="general">General</button>
+                    <button class="filter-btn" data-filter="important">Important</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                </div>
+
+                <div id="noticeList" class="notice-list">
+                    <!-- Sample Notice Items -->
+                    <div class="notice-item" data-category="important">
+                        <div class="notice-header">
+                            <h3>Important Notice Title</h3>
+                            <span class="notice-date">March 15, 2024</span>
+                        </div>
+                        <div class="notice-content">
+                            <p>This is a sample important notice content. It contains important information for all members.</p>
+                        </div>
+                        <div class="notice-footer">
+                            <span class="notice-category">Important</span>
+                            <a href="#" class="notice-attachment">
+                                <i class="fas fa-paperclip"></i> Attachment
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="notice-item" data-category="general">
+                        <div class="notice-header">
+                            <h3>General Announcement</h3>
+                            <span class="notice-date">March 10, 2024</span>
+                        </div>
+                        <div class="notice-content">
+                            <p>This is a general announcement for all society members.</p>
+                        </div>
+                        <div class="notice-footer">
+                            <span class="notice-category">General</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn" data-page="prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="page-info">Page 1 of 1</span>
+                    <button class="page-btn" data-page="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> Phone: +91 XXXXXXXXXX</p>
+                <p><i class="fas fa-envelope"></i> Email: info@deccanmonogram.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: [Your Society Address]</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="channel-partner.html">Channel Partner</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Admin Login Handling
+            const loginForm = document.getElementById('loginForm');
+            const adminPanel = document.getElementById('adminPanel');
+            const adminLogin = document.getElementById('adminLogin');
+
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Simple authentication (replace with proper backend authentication)
+                if (username === 'admin' && password === 'password') {
+                    adminLogin.style.display = 'none';
+                    adminPanel.style.display = 'block';
+                } else {
+                    alert('Invalid credentials');
+                }
+            });
+
+            // Notice Filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const noticeItems = document.querySelectorAll('.notice-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    noticeItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Notice Form Handling
+            const noticeForm = document.getElementById('noticeForm');
+            noticeForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Handle notice submission (implement backend integration)
+                alert('Notice posted successfully!');
+                noticeForm.reset();
+            });
+        });
+    </script>
+</body>
+</html> 
