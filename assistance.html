@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistance - Deccan Monogram</title>
+    <title>Assistance - Deccan Multi State Housing Cooperative Society Ltd</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,9 +12,9 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="logo.jpeg" alt="Deccan Multi State Housing Cooperative Society Ltd. Logo">
+                    <img src="./images/home/logo.jpeg" alt="Deccan Multi State Housing Cooperative Society Ltd. Logo">
                 </a>
-                <h1>Deccan Monogram</h1>
+                <h1>Deccan Multi State Housing Cooperative Society Ltd</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -32,10 +32,11 @@
         </nav>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
+    <main class="assistance-page">
+        <section class="hero" style="background-image: url('./images/assistance/info-assistance.jpeg');">
+            <div class="hero-content">
                 <h1>Assistance</h1>
+                <p>We're Here to Help You</p>
             </div>
         </section>
 
@@ -146,7 +147,7 @@
             const marker = new google.maps.Marker({
                 position: societyLocation,
                 map: map,
-                title: "Deccan Monogram"
+                title: "Deccan Multi State Housing Cooperative Society Ltd"
             });
         }
         window.onload = initMap;
